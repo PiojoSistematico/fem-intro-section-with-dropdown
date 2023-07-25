@@ -1,35 +1,76 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import logo from "./assets/images/logo.svg";
+import heroMobile from "./assets/images/image-hero-mobile.png";
+import heroDesktop from "./assets/images/image-hero-desktop.png";
+import arrowDown from "./assets/images/icon-arrow-down.svg";
+import arrowUp from "./assets/images/icon-arrow-up.svg";
+import clientDatabiz from "./assets/images/client-databiz.svg";
+import clientAudiophile from "./assets/images/client-audiophile.svg";
+import clientMaker from "./assets/images/client-maker.svg";
+import clientMeet from "./assets/images/client-meet.svg";
+import menu from "./assets/images/icon-menu.svg";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main>
+      <header>
+        <img src={logo} alt="" className="logo" />
+
+        <nav>
+          <ul className="links-section">
+            <li>
+              <a href="">
+                Features <img src={arrowDown} alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Company <img src={arrowDown} alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">Careers</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+          </ul>
+          <ul className="buttons-section">
+            <button className="btn-login">Login</button>
+            <button className="btn-register">Register</button>
+          </ul>
+        </nav>
+        <img src={menu} alt="" className="btn-menu" />
+      </header>
+      <section className="main-section">
+        <section className="hero-section">
+          <img src={heroMobile} alt="" className="hero-mobile" />
+          <img src={heroDesktop} alt="" className="hero-desktop" />
+        </section>
+        <section className="description-section">
+          <h1>Make remote work</h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button className="btn-learn-more">Learn more</button>
+          <ul className="footer-ul">
+            <li>
+              <img src={clientDatabiz} alt="" />
+            </li>
+            <li>
+              <img src={clientAudiophile} alt="" />
+            </li>
+            <li>
+              <img src={clientMeet} alt="" />
+            </li>
+            <li>
+              <img src={clientMaker} alt="" />
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+  );
 }
 
-export default App
+export default App;
