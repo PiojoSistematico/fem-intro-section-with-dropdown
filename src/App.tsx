@@ -1,50 +1,19 @@
-import logo from "./assets/images/logo.svg";
 import heroMobile from "./assets/images/image-hero-mobile.png";
 import heroDesktop from "./assets/images/image-hero-desktop.png";
-import arrowDown from "./assets/images/icon-arrow-down.svg";
-import arrowUp from "./assets/images/icon-arrow-up.svg";
 import clientDatabiz from "./assets/images/client-databiz.svg";
 import clientAudiophile from "./assets/images/client-audiophile.svg";
 import clientMaker from "./assets/images/client-maker.svg";
 import clientMeet from "./assets/images/client-meet.svg";
-import menu from "./assets/images/icon-menu.svg";
+import Menu from "./components/Menu";
 
 function App() {
   return (
-    <main>
-      <header>
-        <img src={logo} alt="" className="logo" />
-
-        <nav>
-          <ul className="links-section">
-            <li>
-              <a href="">
-                Features <img src={arrowDown} alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Company <img src={arrowDown} alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="">Careers</a>
-            </li>
-            <li>
-              <a href="">About</a>
-            </li>
-          </ul>
-          <ul className="buttons-section">
-            <button className="btn-login">Login</button>
-            <button className="btn-register">Register</button>
-          </ul>
-        </nav>
-        <img src={menu} alt="" className="btn-menu" />
-      </header>
-      <section className="main-section">
+    <>
+      <Menu></Menu>
+      <main className="main-section">
         <section className="hero-section">
-          <img src={heroMobile} alt="" className="hero-mobile" />
-          <img src={heroDesktop} alt="" className="hero-desktop" />
+          <img src={heroMobile} alt="" className="mobile" />
+          <img src={heroDesktop} alt="" className="desktop" />
         </section>
         <section className="description-section">
           <h1>Make remote work</h1>
@@ -68,8 +37,8 @@ function App() {
             </li>
           </ul>
         </section>
-      </section>
-    </main>
+      </main>
+    </>
   );
 }
 
