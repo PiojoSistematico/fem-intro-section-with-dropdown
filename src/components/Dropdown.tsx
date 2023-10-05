@@ -18,12 +18,20 @@ const Dropdown: React.FunctionComponent<DropdownProps> = ({
   }
 
   return (
-    <li>
+    <li className="relative-li">
       <a href="#" className="dropdown" onClick={handleClick}>
         <span>{title}</span>
         <img src={isOpen ? arrowUp : arrowDown} alt="" className="arrow" />
       </a>
-      {isOpen && <ul className="dropdown-content">{children}</ul>}
+      {isOpen && (
+        <ul
+          className={
+            title == "Features" ? "dropdown-content right" : "dropdown-content"
+          }
+        >
+          {children}
+        </ul>
+      )}
     </li>
   );
 };

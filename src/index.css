@@ -188,8 +188,8 @@ a:focus-visible,
   background-color: var(--clr-neutral-off-white);
   border: none;
   z-index: 999;
-  width: var(--size-700);
-  height: var(--size-700);
+  width: var(--size-600);
+  height: var(--size-600);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -206,6 +206,7 @@ a:focus-visible,
   display: flex;
   flex-direction: column;
   gap: var(--size-400);
+  padding: var(--size-400);
 }
 
 .arrow {
@@ -329,44 +330,6 @@ p {
   gap: 1rem;
 }
 
-/* nav {
-  display: none;
-}
-
-a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--clr-neutral-medium-gray);
-  font-size: var(--font-size-400);
-}
-
-a img {
-  height: 1rem;
-  width: 1rem;
-}
-
-.links-section {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.buttons-section {
-  justify-self: end;
-}
-
-.logo {
-  justify-self: start;
-  width: 20%;
-  max-height: 3vh;
-}
-.btn-menu {
-  max-height: 3vh;
-  width: 20%;
-}
-
-*/
-
 /* https://codepen.io/sosuke/pen/Pjoqqp */
 /* .red-dot {
   width: 0.5rem;
@@ -403,7 +366,7 @@ a img {
   ul {
     display: flex;
     flex-direction: row;
-    gap: var(--size-400);
+    gap: var(--size-600);
     font-size: var(--font-size-nav);
   }
   .links-section {
@@ -444,5 +407,24 @@ a img {
   }
   .hero-section {
     order: 2;
+  }
+  .relative-li {
+    position: relative;
+  }
+  .dropdown-content {
+    width: max-content;
+    position: absolute;
+    /* border: 1px solid black; */
+    padding: var(--size-400) var(--size-600);
+    top: 0;
+    left: 0;
+    transform: translate(0%, 2rem);
+    border-radius: 0.5rem;
+    background-color: var(--clr-neutral-off-white);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  }
+  .right {
+    left: auto;
+    right: 0;
   }
 }
